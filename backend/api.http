@@ -1,0 +1,155 @@
+@baseUrl = http://127.0.0.1:8000/api
+
+
+POST {{ baseUrl }}/register
+content-type: application/json
+
+{
+    "firstName": "nikhil",
+    "lastName": "limbad",
+    "email":"nikhil@gmail.com",
+    "password":"nikhil"
+}
+
+
+###
+
+# @name Auth
+
+POST {{ baseUrl }}/auth
+content-type: application/json
+
+
+{
+    "email":"nikhil@gmail.com",
+    "password":"nikhil"
+}
+
+
+
+###
+
+#### Variable Response 
+@accessToken = {{Auth.response.body.$.data.access_token}}
+
+
+###
+
+GET {{ baseUrl }}/brand
+
+
+###
+
+
+POST {{ baseUrl }}/brand
+content-type: application/json
+
+
+{
+    "title":"apple1"
+}
+
+
+###
+
+
+PUT {{ baseUrl }}/brand
+content-type: application/json
+
+
+{
+    "title":"apple405",
+    "brand":"62e6677597d876c710d96856"
+}
+
+###
+
+DELETE  {{ baseUrl }}/brand
+content-type: application/json
+
+
+{
+    "brand":"62e6677597d876c710d96856"
+}
+
+
+
+
+###
+
+GET {{ baseUrl }}/products
+
+
+###
+
+
+POST {{ baseUrl }}/product
+content-type: application/json
+
+
+{
+    "name":"Automatic Watch",
+    "brand":"62e6676f97d876c710d96854",
+    "stock":"1000",
+    "price":"350",
+    "image_link":"https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.",
+    "features":["Chronograph","Anti‑magnetic","Chronometer"],
+    "specification":[
+        {
+            "title":"Between lugs",
+            "value":"20 mm"
+        },
+        {
+            "title":"Case",
+            "value":"Steel"
+        }
+    ]
+}
+
+
+###
+
+
+PUT {{ baseUrl }}/product
+content-type: application/json
+
+{
+    "product":"62e66ee2a3eaec88d98cfca7",
+    "features":["Four"]
+
+}
+
+
+###
+
+DELETE  {{ baseUrl }}/product
+content-type: application/json
+
+{
+    "product":"62e66ee2a3eaec88d98cfca7"
+}
+
+
+###
+
+
+
+POST {{ baseUrl }}/order
+content-type: application/json
+authorization: Bearer {{accessToken}}
+
+{
+    "orderItem":[
+        {
+            "product":"62e7f678a4dd972667ea29b0",
+            "quantity":1
+        },
+        {
+            "product":"62e7b2208b5ecbf063a1d991",
+            "quantity":1
+        }
+    ]
+}
+
+

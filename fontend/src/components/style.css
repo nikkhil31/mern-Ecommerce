@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap');
+
+:root {
+  --blue: #5ca3ff;
+  --yellow: #d69e2e;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--blue);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+}
+.header-left {
+  display: flex;
+}
+
+.header-left li {
+  color: #fff;
+  margin-left: 1.5rem;
+  list-style: none;
+}
+
+/* Product */
+
+.products {
+  margin-top: 1rem;
+}
+
+.product-list-title {
+  font-size: 25px;
+  margin-top: 1rem;
+}
+
+.product-grid {
+  margin-top: 1rem;
+}
+
+.product-card {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+/* product detail */
+
+.product-detail {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.product-info p {
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.features {
+  margin-top: 1rem;
+}
+
+.features p {
+  font-size: 22px;
+}
+
+.features ul {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}
+
+.features li {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.heading-detail {
+  color: var(--yellow);
+}
+
+.product-detail-list ul {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 1rem;
+}
+
+.product-detail-list li {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+/* cart */
+
+.add-to-cart {
+  margin: 2rem 0 3rem 0;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  background-color: var(--blue);
+  padding: 1rem 0;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cart-bottom {
+  width: 81%;
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+  margin-top: 2.5rem;
+}
+
+.cart-bottom-button {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 15px;
+  font-weight: bolder;
+  border: 0;
+}
+
+.quantity {
+  width: 35px;
+  height: 35px;
+  border: 0;
+  cursor: pointer;
+}
+
+/* checkout */
+
+.checkout-button {
+  width: 81%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.checkout-button button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--blue);
+  font-size: 15px;
+  color: #fff;
+  font-weight: bolder;
+  border: 0;
+  cursor: pointer;
+}
+
+/* utills */
+.container {
+  padding: 0 2rem;
+}
+
+.form-container {
+  width: 80%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  /* justify-content: space-between; */
+}
+
+.form-group {
+  width: 100%;
+}
+
+.forminput {
+  padding: 1rem;
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.table {
+  margin-top: 2.5rem;
+}
+
+.table table,
+.table td,
+.table th {
+  border: 1px solid;
+  padding: 1rem;
+  text-align: center;
+}
+
+.table table {
+  width: 80%;
+  border-collapse: collapse;
+  /* margin: auto; */
+}
+
+.table td {
+  align-items: center;
+}
+
+/* Login */
+
+.loginBox {
+  width: 400px;
+  /* height: 400px; */
+  background-color: #fff;
+  margin: auto;
+  /* padding: auto; */
+  padding-bottom: 3rem;
+}
+
+.loginBox h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 35px;
+}
+
+.loginBox form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.loginBox form input {
+  width: 100%;
+  height: 50px;
+  margin-top: 1rem;
+  font-size: 22px;
+}
+
+.loginBox form input[type='text'],
+.loginBox form input[type='password'] {
+  padding: 1rem;
+  border: 2px solid #ddd;
+}
+
+.loginBox form input[type='submit'] {
+  background-color: rgb(54, 112, 237);
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  width: 320px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  /* align-items: center; */
+}
+
+.form-field span,
+.error {
+  align-self: flex-start;
+  color: #e91919;
+  display: block;
+  font-size: 15px;
+}
+.alert-container {
+  width: 315px;
+}
